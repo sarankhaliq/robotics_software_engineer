@@ -63,8 +63,10 @@ CMAKE_BINARY_DIR = /home/rse/assignment_ws/src/robotics_software_engineer/module
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/task2.dir/all
 all: CMakeFiles/task1_main.dir/all
+all: CMakeFiles/task2.dir/all
+all: CMakeFiles/task3.dir/all
+all: CMakeFiles/task3_main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,9 +74,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/task2.dir/clean
 clean: CMakeFiles/task1_main.dir/clean
+clean: CMakeFiles/task2.dir/clean
+clean: CMakeFiles/task3.dir/clean
+clean: CMakeFiles/task3_main.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/task1_main.dir
+
+# All Build rule for target.
+CMakeFiles/task1_main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles --progress-num=1,2,3 "Built target task1_main"
+.PHONY : CMakeFiles/task1_main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/task1_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task1_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 0
+.PHONY : CMakeFiles/task1_main.dir/rule
+
+# Convenience name for target.
+task1_main: CMakeFiles/task1_main.dir/rule
+.PHONY : task1_main
+
+# clean rule for target.
+CMakeFiles/task1_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/clean
+.PHONY : CMakeFiles/task1_main.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/task2.dir
@@ -103,30 +133,56 @@ CMakeFiles/task2.dir/clean:
 .PHONY : CMakeFiles/task2.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/task1_main.dir
+# Target rules for target CMakeFiles/task3.dir
 
 # All Build rule for target.
-CMakeFiles/task1_main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles --progress-num=1,2,3 "Built target task1_main"
-.PHONY : CMakeFiles/task1_main.dir/all
+CMakeFiles/task3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles --progress-num=6,7 "Built target task3"
+.PHONY : CMakeFiles/task3.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/task1_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task1_main.dir/all
+CMakeFiles/task3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task3.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 0
-.PHONY : CMakeFiles/task1_main.dir/rule
+.PHONY : CMakeFiles/task3.dir/rule
 
 # Convenience name for target.
-task1_main: CMakeFiles/task1_main.dir/rule
-.PHONY : task1_main
+task3: CMakeFiles/task3.dir/rule
+.PHONY : task3
 
 # clean rule for target.
-CMakeFiles/task1_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/clean
-.PHONY : CMakeFiles/task1_main.dir/clean
+CMakeFiles/task3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3.dir/build.make CMakeFiles/task3.dir/clean
+.PHONY : CMakeFiles/task3.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/task3_main.dir
+
+# All Build rule for target.
+CMakeFiles/task3_main.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_main.dir/build.make CMakeFiles/task3_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_main.dir/build.make CMakeFiles/task3_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles --progress-num=8,9,10 "Built target task3_main"
+.PHONY : CMakeFiles/task3_main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/task3_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task3_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 0
+.PHONY : CMakeFiles/task3_main.dir/rule
+
+# Convenience name for target.
+task3_main: CMakeFiles/task3_main.dir/rule
+.PHONY : task3_main
+
+# clean rule for target.
+CMakeFiles/task3_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task3_main.dir/build.make CMakeFiles/task3_main.dir/clean
+.PHONY : CMakeFiles/task3_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

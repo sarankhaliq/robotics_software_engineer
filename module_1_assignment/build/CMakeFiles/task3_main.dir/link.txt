@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/task3_main.dir/src/task3_main.cpp.o CMakeFiles/task3_main.dir/src/task3_codes.cpp.o -o task3_main 
