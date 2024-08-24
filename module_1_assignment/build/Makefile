@@ -117,41 +117,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named task1
+# Target rules for targets named task1_main
 
 # Build rule for target.
-task1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1
-.PHONY : task1
+task1_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task1_main
+.PHONY : task1_main
 
 # fast build rule for target.
-task1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
-.PHONY : task1/fast
+task1_main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/build
+.PHONY : task1_main/fast
 
-src/task1.o: src/task1.cpp.o
-.PHONY : src/task1.o
+src/task1_codes.o: src/task1_codes.cpp.o
+.PHONY : src/task1_codes.o
 
 # target to build an object file
-src/task1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/src/task1.cpp.o
-.PHONY : src/task1.cpp.o
+src/task1_codes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_codes.cpp.o
+.PHONY : src/task1_codes.cpp.o
 
-src/task1.i: src/task1.cpp.i
-.PHONY : src/task1.i
+src/task1_codes.i: src/task1_codes.cpp.i
+.PHONY : src/task1_codes.i
 
 # target to preprocess a source file
-src/task1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/src/task1.cpp.i
-.PHONY : src/task1.cpp.i
+src/task1_codes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_codes.cpp.i
+.PHONY : src/task1_codes.cpp.i
 
-src/task1.s: src/task1.cpp.s
-.PHONY : src/task1.s
+src/task1_codes.s: src/task1_codes.cpp.s
+.PHONY : src/task1_codes.s
 
 # target to generate assembly for a file
-src/task1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/src/task1.cpp.s
-.PHONY : src/task1.cpp.s
+src/task1_codes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_codes.cpp.s
+.PHONY : src/task1_codes.cpp.s
+
+src/task1_main.o: src/task1_main.cpp.o
+.PHONY : src/task1_main.o
+
+# target to build an object file
+src/task1_main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_main.cpp.o
+.PHONY : src/task1_main.cpp.o
+
+src/task1_main.i: src/task1_main.cpp.i
+.PHONY : src/task1_main.i
+
+# target to preprocess a source file
+src/task1_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_main.cpp.i
+.PHONY : src/task1_main.cpp.i
+
+src/task1_main.s: src/task1_main.cpp.s
+.PHONY : src/task1_main.s
+
+# target to generate assembly for a file
+src/task1_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_main.cpp.s
+.PHONY : src/task1_main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... task1"
-	@echo "... src/task1.o"
-	@echo "... src/task1.i"
-	@echo "... src/task1.s"
+	@echo "... task1_main"
+	@echo "... src/task1_codes.o"
+	@echo "... src/task1_codes.i"
+	@echo "... src/task1_codes.s"
+	@echo "... src/task1_main.o"
+	@echo "... src/task1_main.i"
+	@echo "... src/task1_main.s"
 .PHONY : help
 
 
