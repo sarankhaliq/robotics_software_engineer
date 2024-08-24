@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /home/rse/assignment_ws/src/robotics_software_engineer/module
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/task2.dir/all
 all: CMakeFiles/task1_main.dir/all
 .PHONY : all
 
@@ -71,8 +72,35 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/task2.dir/clean
 clean: CMakeFiles/task1_main.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/task2.dir
+
+# All Build rule for target.
+CMakeFiles/task2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles --progress-num=4,5 "Built target task2"
+.PHONY : CMakeFiles/task2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/task2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/task2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/build/CMakeFiles 0
+.PHONY : CMakeFiles/task2.dir/rule
+
+# Convenience name for target.
+task2: CMakeFiles/task2.dir/rule
+.PHONY : task2
+
+# clean rule for target.
+CMakeFiles/task2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/clean
+.PHONY : CMakeFiles/task2.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/task1_main.dir

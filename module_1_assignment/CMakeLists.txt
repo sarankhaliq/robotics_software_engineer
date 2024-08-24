@@ -7,5 +7,5 @@ endif()
 
 include_directories(/home/rse/assignment_ws/src/robotics_software_engineer/module_1_assignment/include())
 
-
+add_executable(task2 src/task2.cpp) 
 add_executable(task1_main src/task1_main.cpp src/task1_codes.cpp) 

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named task2
+
+# Build rule for target.
+task2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 task2
+.PHONY : task2
+
+# fast build rule for target.
+task2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/build
+.PHONY : task2/fast
+
+#=============================================================================
 # Target rules for targets named task1_main
 
 # Build rule for target.
@@ -177,6 +190,30 @@ src/task1_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1_main.dir/build.make CMakeFiles/task1_main.dir/src/task1_main.cpp.s
 .PHONY : src/task1_main.cpp.s
 
+src/task2.o: src/task2.cpp.o
+.PHONY : src/task2.o
+
+# target to build an object file
+src/task2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/src/task2.cpp.o
+.PHONY : src/task2.cpp.o
+
+src/task2.i: src/task2.cpp.i
+.PHONY : src/task2.i
+
+# target to preprocess a source file
+src/task2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/src/task2.cpp.i
+.PHONY : src/task2.cpp.i
+
+src/task2.s: src/task2.cpp.s
+.PHONY : src/task2.s
+
+# target to generate assembly for a file
+src/task2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task2.dir/build.make CMakeFiles/task2.dir/src/task2.cpp.s
+.PHONY : src/task2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +223,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... task1_main"
+	@echo "... task2"
 	@echo "... src/task1_codes.o"
 	@echo "... src/task1_codes.i"
 	@echo "... src/task1_codes.s"
 	@echo "... src/task1_main.o"
 	@echo "... src/task1_main.i"
 	@echo "... src/task1_main.s"
+	@echo "... src/task2.o"
+	@echo "... src/task2.i"
+	@echo "... src/task2.s"
 .PHONY : help
 
 
