@@ -9,5 +9,4 @@ include_directories(/home/rse/assignment_ws/src/robotics_software_engineer/modul
 
 add_executable(task1_main src/task1_main.cpp src/task1_codes.cpp) 
 add_executable(task2 src/task2.cpp) 
-add_executable(task3 src/task3.cpp) 
 add_executable(task3_main src/task3_main.cpp src/task3_codes.cpp) 
