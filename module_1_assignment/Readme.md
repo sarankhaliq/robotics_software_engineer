@@ -5,11 +5,11 @@
 - Go to the directory where you want to clone the repository
 - Clone the repository using follwing command
 ```
-git clone https://github.com/sarankhaliq/robotics_software_engineer
+git clone --single-branch --branch assignments https://github.com/sarankhaliq/robotics_software_engineer.git
 ```
 - Perform the following Commands 
 ```
-robotics_software_engineer/module_1_assignment/build/
+cd robotics_software_engineer/module_1_assignment/build/
 cmake ..
 make
 ```
