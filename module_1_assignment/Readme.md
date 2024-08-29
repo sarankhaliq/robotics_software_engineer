@@ -2,10 +2,10 @@
 
 ## How to run my assignment code
 
-- Go to the directory where you want to clone the repository
-- Clone the repository using follwing command
+- GCreate your_worksapce (You can choose any name for your workplace). Go to your workspace directory, where you want to clone the repository
+- Follow the commands to Clone the repository 
 ```
-mkdir -p ~/your_workspace/src
+mkdir -p ~/your_workspace/src 
 cd your_workspace/src
 git clone --single-branch --branch assignments https://github.com/sarankhaliq/robotics_software_engineer.git
 ```
