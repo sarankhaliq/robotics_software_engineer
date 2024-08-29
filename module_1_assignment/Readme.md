@@ -5,6 +5,8 @@
 - Go to the directory where you want to clone the repository
 - Clone the repository using follwing command
 ```
+mkdir -p ~/your_workspace/src
+cd your_workspace/src
 git clone --single-branch --branch assignments https://github.com/sarankhaliq/robotics_software_engineer.git
 ```
 - Perform the following Commands 
