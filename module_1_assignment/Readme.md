@@ -9,7 +9,9 @@ git clone --single-branch --branch assignments https://github.com/sarankhaliq/ro
 ```
 - Perform the following Commands 
 ```
-cd robotics_software_engineer/module_1_assignment/build/
+cd robotics_software_engineer/module_1_assignment
+mkdir build
+cd build
 cmake ..
 make
 ```
