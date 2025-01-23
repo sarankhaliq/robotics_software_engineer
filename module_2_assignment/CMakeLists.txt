@@ -29,14 +29,13 @@ ament_target_dependencies(circle rclcpp geometry_msgs)
 add_executable(multi_circle src/drive_multi_circle.cpp)
 ament_target_dependencies(multi_circle rclcpp geometry_msgs)
 
-add_executable(too_n_fro src/drive_too_n_fro.cpp)
-ament_target_dependencies(too_n_fro rclcpp geometry_msgs turtlesim std_srvs)
+#add_executable(too_n_fro src/drive_too_n_fro.cpp)
+#ent_target_dependencies(too_n_fro rclcpp geometry_msgs turtlesim std_srvs)
 
 install(TARGETS
   spiral
   circle
   multi_circle
-  too_n_fro
   DESTINATION lib/${PROJECT_NAME})
 
   install(DIRECTORY

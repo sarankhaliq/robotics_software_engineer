@@ -11,7 +11,7 @@ def generate_launch_description():
  
     user_radius=float(input("Enter the radius value: "))
     drive_circle=Node(
-        package='drive_mobile_robot',
+        package='module_2_assignment',
         executable='circle',
         name='drive_circle',
         parameters=[{'radius': user_radius}]
