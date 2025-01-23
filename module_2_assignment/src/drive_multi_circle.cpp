@@ -20,11 +20,14 @@ class MinimalPublisher : public rclcpp::Node
     : Node("minimal_publisher"), count_(0)
     {
       this->declare_parameter<double>("radius", 1.0);
+      this->declare_parameter<string>("custom_topic", "/turtle1/cmd_vel");
+
 
       // Retrieve the value of the "radius" parameter
       this->get_parameter("radius", radius_);
+      topic_=this->get_parameter("custom_topic").as_string();
       
-      publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 10);
+      publisher_ = this->create_publisher<geometry_msgs::msg::Twist>(topic_, 10);
       timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
     }
@@ -46,6 +49,7 @@ class MinimalPublisher : public rclcpp::Node
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     size_t count_;
     double radius_;
+    string topic_;
 };
 
 int main(int argc, char * argv[])
