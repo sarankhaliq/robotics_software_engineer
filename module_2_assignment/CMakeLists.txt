@@ -10,6 +10,8 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -29,14 +31,15 @@ ament_target_dependencies(circle rclcpp geometry_msgs)
 add_executable(multi_circle src/drive_multi_circle.cpp)
 ament_target_dependencies(multi_circle rclcpp geometry_msgs)
 
-add_executable(too_n_fro src/drive_too_n_fro.cpp)
-ament_target_dependencies(too_n_fro rclcpp geometry_msgs turtlesim std_srvs)
+add_executable(task_4 src/task_4.cpp)
+ament_target_dependencies(task_4 rclcpp geometry_msgs)
 
 install(TARGETS
   spiral
   circle
   multi_circle
-  too_n_fro
+  task_4
+
   DESTINATION lib/${PROJECT_NAME})
 
   install(DIRECTORY
