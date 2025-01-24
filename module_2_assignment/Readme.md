@@ -20,7 +20,7 @@ ros2 run module_2_assignment spiral
 ros2 launch module_2_assignment multi_node_circle.launch.py
 ```
 
-#### Description of Launch File
+#### Description of Launch File and Node
 
 The user specifies the Radius of Circle in Launch file as described in Launch file
 
