@@ -10,10 +10,22 @@ def generate_launch_description():
         executable='turtlesim_node',
         name='turtlesim'
     )
+    kill_turtle1=ExecuteProcess(
+        cmd=['ros2', 'service', 'call', '/kill', 'turtlesim/srv/Kill', "\"name: 'turtle1'\""],    
+        name='spawn_turtle1',
+        shell=True
+    )
+
+    spawn_turtle1=ExecuteProcess(
+        cmd=['ros2', 'service', 'call', '/spawn', 'turtlesim/srv/Spawn', "\"{x: 5.0, y: 5.0, theta: 1.57, name: 'turtle1'}\""],    
+        name='spawn_turtle1',
+        shell=True
+    )
+
 
     spawn_turtle2=ExecuteProcess(
         cmd=['ros2', 'service', 'call', '/spawn', 'turtlesim/srv/Spawn', "\"{x: 2.0, y: 10.0, theta: 1.57, name: 'turtle2'}\""],    
-        name='spawn_turtle1',
+        name='spawn_turtle2',
         shell=True
     )
 
