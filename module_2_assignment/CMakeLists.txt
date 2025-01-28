@@ -18,8 +18,6 @@ find_package(turtlesim REQUIRED)
 find_package(std_srvs REQUIRED)
 
 
-
-
 add_executable(spiral src/drive_spiral.cpp)
 ament_target_dependencies(spiral rclcpp geometry_msgs)
 

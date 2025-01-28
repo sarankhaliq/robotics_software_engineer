@@ -11,7 +11,7 @@ def generate_launch_description():
  
 
     drive_spiral=Node(
-        package='drive_mobile_robot',
+        package='module_2_assignment',
         executable='spiral',
         name='drive_spiral'
     )
